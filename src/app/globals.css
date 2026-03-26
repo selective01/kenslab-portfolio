@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── FONT VARIABLES ───────────────────────────────────────────────────────── */
+:root {
+  --font-akshar: "Akshar", sans-serif;
+  --font-inter:  "Inter",  sans-serif;
+
+  /* ── LIGHT MODE ─────────────────────────────────────────────────────────── */
+  --color-bg:          #f5f5f5;
+  --color-surface:     #ebebeb;
+  --color-surface2:    #e0e0e0;
+  --color-border:      #cccccc;
+  --color-text:        #111111;
+  --color-gray:        #666666;
+  --color-gray-light:  #444444;
+}
+
+/* ── DARK MODE ────────────────────────────────────────────────────────────── */
+.dark {
+  --color-bg:          #111111;
+  --color-surface:     #161616;
+  --color-surface2:    #1e1e1e;
+  --color-border:      #2a2a2a;
+  --color-text:        #ffffff;
+  --color-gray:        #888888;
+  --color-gray-light:  #bbbbbb;
+}
+
+/* ── BASE RESETS ─────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-inter);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar       { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--color-bg); }
+  ::-webkit-scrollbar-thumb { background: #e8671a; border-radius: 9999px; }
+}
+
+/* ── MAP CSS VARIABLES TO BRAND TAILWIND CLASSES ─────────────────────────── */
+/* This makes bg-brand-bg, text-brand-gray etc. auto-switch with the theme   */
+.bg-brand-bg       { background-color: var(--color-bg)      !important; }
+.bg-brand-surface  { background-color: var(--color-surface)  !important; }
+.bg-brand-surface2 { background-color: var(--color-surface2) !important; }
+
+.border-brand-border { border-color: var(--color-border) !important; }
+
+.text-brand-white      { color: var(--color-text)       !important; }
+.text-brand-gray       { color: var(--color-gray)       !important; }
+.text-brand-gray-light { color: var(--color-gray-light) !important; }
+
+/* Navbar background adapts to theme */
+header {
+  background-color: color-mix(in srgb, var(--color-bg) 85%, transparent) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Input fields adapt to theme */
+input, textarea, select {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-gray) !important;
+}
+
+/* ── REUSABLE LAYOUT CLASSES ─────────────────────────────────────────────── */
+@layer components {
+  .section-container {
+    @apply max-w-[1100px] mx-auto px-6 md:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-24;
+  }
+
+  .section-divider {
+    border-top: 1px solid var(--color-border);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
