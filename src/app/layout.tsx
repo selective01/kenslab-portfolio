@@ -20,9 +20,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kenslab-portfolio.vercel.app"),
+
   title: "Ken'sLab — Full-Stack Developer",
   description:
     "Kenechukwu Emmanuel Obaji — Full-Stack Developer specializing in scalable web applications, SaaS platforms, and high-performance APIs.",
+
   icons: {
     icon: [
       { url: "/favicon.ico", type: "image/x-icon" },
@@ -31,20 +34,24 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+
   openGraph: {
     title: "Ken'sLab — Full-Stack Developer",
     description:
       "Kenechukwu Emmanuel Obaji — Full-Stack Developer specializing in scalable web applications, SaaS platforms, and high-performance APIs.",
+    url: "https://kenslab-portfolio.vercel.app",
+    siteName: "Ken'sLab",
     images: [
       {
-        url: "/og-image.png",
-        width: 1536,
-        height: 1024,
+        url: "/og-image.png", // now becomes absolute automatically
+        width: 1200,
+        height: 630,
         alt: "Ken'sLab Open Graph Image",
       },
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Ken'sLab — Full-Stack Developer",

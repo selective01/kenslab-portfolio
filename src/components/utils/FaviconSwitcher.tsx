@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
 
-function setHeadLink(rel: string, href: string, type?: string) {
+function setOrCreateLink(rel: string, href: string) {
   let link = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
 
   if (!link) {
@@ -13,24 +13,29 @@ function setHeadLink(rel: string, href: string, type?: string) {
   }
 
   link.href = href;
-
-  if (type) {
-    link.type = type;
-  }
 }
 
 export default function FaviconSwitcher() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    const isDark = resolvedTheme !== "light";
+    if (!resolvedTheme) return;
 
-    setHeadLink("icon", isDark ? "/favicon.ico" : "/light-favicon.ico", "image/x-icon");
-    setHeadLink(
-      "apple-touch-icon",
-      isDark ? "/apple-touch-icon.png" : "/light-apple-touch-icon.png",
-      "image/png"
-    );
+    const stamp = `v=${Date.now()}`;
+
+    const faviconHref =
+      resolvedTheme === "dark"
+        ? `/favicon.ico?${stamp}`
+        : `/light-favicon.ico?${stamp}`;
+
+    const appleHref =
+      resolvedTheme === "dark"
+        ? `/apple-touch-icon.png?${stamp}`
+        : `/light-apple-touch-icon.png?${stamp}`;
+
+    setOrCreateLink("icon", faviconHref);
+    setOrCreateLink("shortcut icon", faviconHref);
+    setOrCreateLink("apple-touch-icon", appleHref);
   }, [resolvedTheme]);
 
   return null;
