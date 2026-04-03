@@ -43,7 +43,7 @@ export const services: Service[] = [
   },
 ];
 
-export const hourlyRate = "$20.00";
+export const hourlyRate = "$40.00";
 
 export const hourlyTags = [
   "Backend & Frontend",
