@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title:       "SkillFund Investment Platform",
     description: "A full-stack platform connecting creators with investors through a secure, milestone-based funding system. Built with advanced KYC verification, escrow payments, and real-time collaboration features.",
     image:       "/images/projects/skillfund.webp",
-    tags:        ["React", "Node.js", "MongoDB", "Paystack", "Socket.io"],
+    tags:        ["React", "Node.js", "MongoDB", "Paystack", "Stripe", "Crypto", "Socket.io"],
     demoUrl:     "https://skillfund-client.vercel.app/",
     caseStudy:   true,
   },
@@ -17,6 +17,14 @@ export const projects: Project[] = [
     image:       "/images/projects/kcee-collection.webp",
     tags:        ["React", "Node.js", "MongoDB", "Paystack"],
     demoUrl:     "https://kcee-collection.vercel.app/",
+  },
+  {
+    id:          "sparkle-press",
+    title:       "SparklePress Laundry Service",
+    description: "A business website for a London-based laundry service with online booking, pricing, pickup scheduling, and EmailJS-powered booking notifications. Built with a clean sky blue design and full mobile responsiveness.",
+    image:       "/images/projects/sparkle-press.webp",
+    tags:        ["Next.js", "TypeScript", "Tailwind CSS", "EmailJS"],
+    demoUrl:     "https://sparkle-press.vercel.app/",
   },
 ];
 

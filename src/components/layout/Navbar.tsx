@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/ui/ThemeToggle";
-import CVDownload from "@/components/ui/CVDownload";
 
 const navLinks = [
   { label: "About Me",  href: "/#about"    },
@@ -50,7 +49,6 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <CVDownload />
           <ThemeToggle />
           <Link
             href="/#projects"
