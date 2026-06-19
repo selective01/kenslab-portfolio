@@ -2,6 +2,15 @@ import type { Project, CaseStudyData } from "@/types";
 
 export const projects: Project[] = [
   {
+    id:          "nobarity",
+    title:       "Nobarity — Rewards & Bills Platform",
+    description: "A live African fintech rewards ecosystem where users earn points by completing sponsored offers and redeem them for airtime, data, electricity tokens, cable TV, and direct bank cash withdrawals. Supports 6 African countries via Flutterwave.",
+    image:       "/images/projects/nobarity.webp",
+    tags:        ["Next.js 14", "TypeScript", "Supabase", "PostgreSQL", "Flutterwave", "VTPass", "CPALead", "CPAGrip"],
+    demoUrl:     "https://nobarity-web.vercel.app/",
+    caseStudy:   true,
+  },
+  {
     id:          "skillfund",
     title:       "SkillFund Investment Platform",
     description: "A full-stack platform connecting creators with investors through a secure, milestone-based funding system. Built with advanced KYC verification, escrow payments, and real-time collaboration features.",
@@ -29,6 +38,46 @@ export const projects: Project[] = [
 ];
 
 export const caseStudy: CaseStudyData = {
+  title:       "Nobarity: African Rewards & Bills Ecosystem",
+  description: "Full-stack development of a live fintech rewards platform serving users across 6 African countries — earning points from CPA offer networks and redeeming them for utility bills and direct bank cash withdrawals.",
+  image:       "/images/projects/nobarity.webp",
+  client:      "Nobarity (Founder-built)",
+  deadline:    "Ongoing",
+  role:        "Full-Stack Engineer & Founder",
+  demoUrl:     "https://nobarity-web.vercel.app/",
+
+  problem:
+    "African users have limited options for monetizing their online time and attention. Existing GPT/reward platforms either don't support local bill payments, don't pay out in local currency, or don't work across multiple African countries. Additionally, utility bill payments in Nigeria are fragmented across providers with no unified redemption experience.",
+
+  solution:
+    "Built a complete rewards ecosystem from scratch — users earn points by completing sponsored offers (CPALead iframe, CPAGrip JSON feed), daily check-ins, spin wheel, missions, and referrals. Points are redeemed instantly for airtime, data, electricity tokens (all 10 Nigerian DISCOs), and cable TV via VTPass API. Gold rank and above unlock direct bank cash withdrawals via Flutterwave Transfers API, supporting Nigeria, Ghana, Kenya, South Africa, Tanzania, and Uganda.",
+
+  results: [
+    "Live production platform with real user redemptions and verified postback conversions",
+    "Integrated 2 CPA offer networks (CPALead iframe + CPAGrip JSON API) with server-to-server postback pipelines",
+    "Full Flutterwave cash withdrawal system with configurable daily/weekly limits and webhook-based status updates",
+    "VTPass bill payment integration covering airtime, data, all 10 Nigerian electricity DISCOs, and cable TV",
+    "Admin panel with user management, conversion tracking, withdrawal management, financial reporting, and real-time platform stats",
+    "Country-aware navigation and multi-currency support across 6 African countries",
+  ],
+
+  architecture: {
+    frontend:       "Next.js 14 App Router, TypeScript, Tailwind CSS, Zustand",
+    backend:        "Next.js API Routes, Supabase Edge Functions, PostgreSQL RLS",
+    database:       "Supabase PostgreSQL (17 tables), Redis cache",
+    infrastructure: "Vercel (frontend + API), Supabase (database + auth), Flutterwave, VTPass",
+  },
+
+  techStack: [
+    { category: "Frontend",      items: ["Next.js 14", "TypeScript", "Tailwind CSS", "Zustand"] },
+    { category: "Backend",       items: ["Next.js API Routes", "PostgreSQL", "Supabase Auth"] },
+    { category: "Payments",      items: ["Flutterwave Transfers", "VTPass Bills API"] },
+    { category: "Offer Networks",items: ["CPALead", "CPAGrip JSON Feed"] },
+    { category: "Infrastructure",items: ["Vercel", "Supabase", "Redis"] },
+  ],
+};
+
+export const skillfundCaseStudy: CaseStudyData = {
   title:       "SkillFund: Creator–Investor Platform",
   description: "Full-stack development of a scalable investment platform that connects skilled creators with investors, enabling secure funding through structured milestones and verification systems.",
   image:       "/images/projects/skillfund.webp",
