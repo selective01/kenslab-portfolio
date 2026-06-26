@@ -34,7 +34,7 @@ export const projects: Project[] = [
     description: "An AI-powered SaaS platform helping Nigerian students ace the JAMB university entrance exam. Features GPT-4 personalized question generation, 10,000+ past questions across 18 subjects, a 3-step onboarding wizard, and a role-based member dashboard.",
     image:       "/images/projects/prepgenie.webp",
     tags:        ["Next.js", "TypeScript", "Node.js", "MongoDB", "OpenAI GPT-4", "AWS"],
-    demoUrl:     "https://prepgenie-app.vercel.app/",
+    demoUrl:     "https://prepgenie-tawny.vercel.app/",
     caseStudy:   false,
   },
   {
