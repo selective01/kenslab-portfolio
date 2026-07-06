@@ -7,8 +7,8 @@ type Stat = { value: number; suffix: string; label: string; };
 
 // Updated with accurate numbers from CV
 const stats: Stat[] = [
-  { value: 2,  suffix: "+",  label: "Years of Experience"  },
-  { value: 6,  suffix: "+",  label: "Projects Shipped"     },
+  { value: 3,  suffix: "+",  label: "Years of Experience"  },
+  { value: 20,  suffix: "+",  label: "Projects Shipped"     },
   { value: 3,  suffix: "",   label: "Payment Gateways"     },
   { value: 100, suffix: "%", label: "Remote Ready"         },
 ];
