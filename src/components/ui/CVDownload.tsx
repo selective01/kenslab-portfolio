@@ -8,7 +8,7 @@ import { Download } from "lucide-react";
 export default function CVDownload() {
   return (
     <a
-      href="/Kenechukwu_CV.pdf"
+      href="/Kenechukwu_Obaji_FullStackDeveloper.pdf"
       download                      // 👈 Forces browser to download instead of navigate
       className="
         inline-flex items-center gap-2
