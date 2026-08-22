@@ -10,13 +10,23 @@ export const projects: Project[] = [
     demoUrl:     "https://nobarity-web.vercel.app/",
     caseStudy:   true,
   },
+  // Temporarily hidden — re-add to un-hide
+  // {
+  //   id:          "skillfund",
+  //   title:       "SkillFund Investment Platform",
+  //   description: "A full-stack platform connecting creators with investors through a secure, milestone-based funding system. Built with advanced KYC verification, escrow payments, and real-time collaboration features.",
+  //   image:       "/images/projects/skillfund.webp",
+  //   tags:        ["React", "Node.js", "MongoDB", "Paystack", "Stripe", "Crypto", "Socket.io"],
+  //   demoUrl:     "https://skillfund-client.vercel.app/",
+  //   caseStudy:   true,
+  // },
   {
-    id:          "skillfund",
-    title:       "SkillFund Investment Platform",
-    description: "A full-stack platform connecting creators with investors through a secure, milestone-based funding system. Built with advanced KYC verification, escrow payments, and real-time collaboration features.",
-    image:       "/images/projects/skillfund.webp",
-    tags:        ["React", "Node.js", "MongoDB", "Paystack", "Stripe", "Crypto", "Socket.io"],
-    demoUrl:     "https://skillfund-client.vercel.app/",
+    id:          "pulse",
+    title:       "Pulse — The OS for Electricity",
+    description: "The public site for Pulse, an AI platform governing electrical grids in real time — from forecasting to autonomous orchestration. Built solo as founding frontend engineer, from an early Figma/Vite mockup to a production Next.js site with scroll-driven visualizations and physics-constrained forecasting sections.",
+    image:       "/images/projects/pulse.webp",
+    tags:        ["Next.js 15", "TypeScript", "Tailwind CSS v4", "GSAP", "Lenis", "Cloudflare Pages"],
+    demoUrl:     "https://pulse-org.pages.dev/",
     caseStudy:   true,
   },
   {
@@ -96,7 +106,47 @@ export const caseStudy: CaseStudyData = {
   ],
 };
 
-export const skillfundCaseStudy: CaseStudyData = {
+export const pulseCaseStudy: CaseStudyData = {
+  title:       "Pulse: The OS for Electricity",
+  description: "Solo ownership of the full public site for Pulse, an AI platform that governs electrical grids in real time — built as founding-team Frontend Engineering Lead, from an early Figma/Vite mockup to a shipped production Next.js site.",
+  image:       "/images/projects/pulse.webp",
+  client:      "Pulse (Founding Team)",
+  deadline:    "Ongoing",
+  role:        "Frontend Engineering Lead & Founding Team Member",
+  demoUrl:     "https://pulse-org.pages.dev/",
+
+  problem:
+    "Pulse needed a production-grade public site to match its positioning as the platform layer for grid intelligence — communicating physics-constrained AI, real-time orchestration, and forecasting to operators, utilities, and researchers. The existing groundwork was an early Figma/Vite mockup with no established component architecture, design token system, or animation conventions.",
+
+  solution:
+    "Took sole, single-handed ownership of the full public site — Home, Solution, Company, Team, Pulse Labs, Contact, and Signup — migrating it to a production Next.js (App Router) + TypeScript + Tailwind v4 build. Established the component architecture, design token system, and animation conventions from scratch, then built a scroll-driven reactor visualization, an infinite-loop problem-narrative video gallery, a physics-constrained forecasting section, and a 9-person leadership/team grid with custom hover interactions, working directly with the CEO and CTO on copy, brand, and design sign-off.",
+
+  results: [
+    "Shipped every page live at pulse-org.pages.dev as sole frontend owner",
+    "Diagnosed and resolved a smooth-scroll (Lenis) height-recalculation bug affecting page navigation",
+    "Diagnosed a mobile viewport zoom bug traced to React hydration timing affecting visualViewport.scale",
+    "Resolved a position:sticky failure caused by overflow-x:hidden on body",
+    "Built a grid-based page transition effect and a Resend-powered sign-up flow via edge runtime",
+    "Kept a multi-contributor repo shippable by resolving recurring git workflow issues",
+  ],
+
+  architecture: {
+    frontend:       "Next.js 15 (App Router), TypeScript, Tailwind CSS v4, GSAP, Lenis",
+    backend:        "Next.js Edge Runtime, Resend (email)",
+    database:       "N/A (marketing/public site)",
+    infrastructure: "Cloudflare Pages",
+  },
+
+  techStack: [
+    { category: "Frontend",      items: ["Next.js 15", "TypeScript", "Tailwind CSS v4"] },
+    { category: "Animation",     items: ["GSAP", "Lenis"] },
+    { category: "Backend",       items: ["Edge Runtime", "Resend"] },
+    { category: "Infrastructure",items: ["Cloudflare Pages"] },
+  ],
+};
+
+// Temporarily hidden — re-add export to un-hide
+/* export const skillfundCaseStudy: CaseStudyData = {
   title:       "SkillFund: Creator–Investor Platform",
   description: "Full-stack development of a scalable investment platform that connects skilled creators with investors, enabling secure funding through structured milestones and verification systems.",
   image:       "/images/projects/skillfund.webp",
@@ -134,4 +184,4 @@ export const skillfundCaseStudy: CaseStudyData = {
     { category: "Real-time",      items: ["Socket.io"] },
     { category: "Infrastructure", items: ["Vercel", "Render"] },
   ],
-};
+}; */
