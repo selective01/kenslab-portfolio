@@ -1,8 +1,9 @@
-// CaseStudy.tsx — Featured project deep-dive (Nobarity + SkillFund)
+// CaseStudy.tsx — Featured project deep-dive (Nobarity + Pulse)
+// Note: SkillFund temporarily hidden — see src/data/projects.ts for commented-out data.
 
 import Image        from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
-import { caseStudy, skillfundCaseStudy } from "@/data/projects";
+import { caseStudy, pulseCaseStudy } from "@/data/projects";
 
 const nobarityFeatures = [
   "CPALead iframe + CPAGrip JSON offer walls",
@@ -15,15 +16,15 @@ const nobarityFeatures = [
   "Country-aware navigation & multi-currency support",
 ];
 
-const skillfundFeatures = [
-  "Investor ↔ Creator matching system",
-  "Escrow wallet with milestone-based payouts",
-  "KYC & compliance layer (ID + selfie + BVN)",
-  "Voice verification with call recording",
-  "Guarantor system for high-value funding",
-  "Real-time notifications via Socket.io",
-  "Admin moderation dashboard",
-  "Multi-payment: Paystack + Stripe + Crypto",
+const pulseFeatures = [
+  "Scroll-driven reactor visualization",
+  "Infinite-loop problem-narrative video gallery",
+  "Physics-constrained forecasting section",
+  "9-person leadership/team grid with custom hover states",
+  "Grid-based page transition effect",
+  "Sign-up flow via Resend on edge runtime",
+  "Lenis smooth-scroll with fixed height recalculation",
+  "Design token system & animation conventions built from scratch",
 ];
 
 function CaseStudyCard({
@@ -197,7 +198,7 @@ export default function CaseStudy() {
         
         <div className="border-t border-brand-border my-12" />
 
-        <CaseStudyCard data={skillfundCaseStudy} features={skillfundFeatures} />
+        <CaseStudyCard data={pulseCaseStudy} features={pulseFeatures} />
 
       </div>
     </section>

@@ -1,14 +1,15 @@
 import type { BlogPost } from "@/types";
 
 export const blogPosts: BlogPost[] = [
-  {
-    slug:     "building-skillfund-escrow-system",
-    title:    "How I Built a Full Escrow System with Milestone-Based Payouts",
-    date:     "2026-03-01",
-    excerpt:  "A deep dive into building SkillFund's escrow architecture — from fund locking to milestone verification, dispute resolution, and automated releases.",
-    tags:     ["Node.js", "MongoDB", "Paystack", "Architecture"],
-    readTime: "9 min read",
-  },
+  // Temporarily hidden — re-add to un-hide
+  // {
+  //   slug:     "building-skillfund-escrow-system",
+  //   title:    "How I Built a Full Escrow System with Milestone-Based Payouts",
+  //   date:     "2026-03-01",
+  //   excerpt:  "A deep dive into building SkillFund's escrow architecture — from fund locking to milestone verification, dispute resolution, and automated releases.",
+  //   tags:     ["Node.js", "MongoDB", "Paystack", "Architecture"],
+  //   readTime: "9 min read",
+  // },
   {
     slug:     "integrating-multiple-payment-gateways",
     title:    "Integrating Paystack, Stripe, and Crypto Payments in One App",
